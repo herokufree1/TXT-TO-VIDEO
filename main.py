@@ -33,7 +33,7 @@ bot = Client(
     api_hash=API_HASH,
     bot_token=BOT_TOKEN
 )
-OWNER = 2073438175
+OWNER = "2073438175"
 photo = "https://i.postimg.cc/dVY9nL63/IMG-20250426-130510-655.jpg"
 cpphoto = "https://i.postimg.cc/dVY9nL63/IMG-20250426-130510-655.jpg"
 appxzip = "https://i.postimg.cc/dVY9nL63/IMG-20250426-130510-655.jpg"
