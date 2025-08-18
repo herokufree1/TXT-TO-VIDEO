@@ -37,7 +37,7 @@ OWNER = "2073438175"
 photo = "https://i.postimg.cc/dVY9nL63/IMG-20250426-130510-655.jpg"
 cpphoto = "https://i.postimg.cc/dVY9nL63/IMG-20250426-130510-655.jpg"
 appxzip = "https://i.postimg.cc/dVY9nL63/IMG-20250426-130510-655.jpg"
-my_name = "€--ANJAN PERSON--€"
+my_name = "ANJAN PERSON™"
 CHANNEL_ID = "-1002886837153"##change it with your channel 🆔 
 
 cookies_file_path = os.getenv("COOKIES_FILE_PATH", "youtube_cookies.txt")
@@ -192,11 +192,11 @@ async def txt_handler(bot: Client, m: Message):
         arg = int(raw_text)
     except:
         arg = 1
-    await editable.edit("**Enter Your Batch Name or send `d` for grabing from text filename.**")
+    await editable.edit("**Enter Your Batch Name or send /d for grabing from text filename.**")
     input1: Message = await bot.listen(editable.chat.id)
     raw_text0 = input1.text
     await input1.delete(True)
-    if raw_text0 == 'd':
+    if raw_text0 == '/d':
         b_name = file_name
     else:
         b_name = raw_text0
@@ -223,25 +223,25 @@ async def txt_handler(bot: Client, m: Message):
     except Exception:
             res = "UN"
     
-    await editable.edit("**Enter Your Name or send `d` for use default👨🏻‍💻**")
+    await editable.edit("**Enter Your Name or send /d for use default👨🏻‍💻**")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
-    if raw_text3 == 'd':
+    if raw_text3 == '/d':
         CR = credit
     else:
         CR = raw_text3
 
-    await editable.edit("**Enter Your PW Token or send `d` for use default**")
+    await editable.edit("**Enter Your PW Token or send /d for use default**")
     input4: Message = await bot.listen(editable.chat.id)
     raw_text4 = input4.text
     await input4.delete(True)
-    if raw_text4 == 'd':
+    if raw_text4 == '/d':
         MR = raw_text4
     else:
         MR = raw_text4
         
-    await editable.edit("Now send the **Thumb url**\n**Eg :** ``\n  Send `no`")
+    await editable.edit("Now send the **Thumb url**  or Send /d for no")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -252,7 +252,7 @@ async def txt_handler(bot: Client, m: Message):
         getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
         thumb = "thumb.jpg"
     else:
-        thumb == "no"
+        thumb == "/d"
 
     count =int(raw_text)    
     try:
@@ -667,7 +667,7 @@ async def txt_handler(bot: Client, m: Message):
                         continue                       
                           
                 else:
-                    Show = f"📥 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 »\n\n📝 Title:- `{name}\n\n**🔗 𝐓𝐨𝐭𝐚𝐥 𝐔𝐑𝐋 »** ✨{len(links)}✨\n\n⌨ 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n**𝐌𝐚𝐝𝐞 𝐁𝐲 ANAJAN PERSON™ "
+                    Show = f"📥 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 »\n📝 Title:- `{name}\n🔗 𝐓𝐨𝐭𝐚𝐥 𝐔𝐑𝐋 »  {len(links)}\n⌨ 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n**𝐌𝐚𝐝𝐞 𝐁𝐲 ANAJAN PERSON™ "
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
